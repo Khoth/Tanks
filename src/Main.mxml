@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+				width="640"
+				height="480"
+				verticalScrollPolicy="off"
+				horizontalScrollPolicy="off"
+				autoLayout="false"
+				creationComplete="Run()">
+	<mx:Script>
+		<![CDATA[
+			import screens.Editor;
+			import screens.Menu;
+			import screens.Game;
+			import screens.Scoresheet;
+			
+			private var menu:Menu = new Menu();
+			private var game:Game = new Game();
+			private var scoresheet:Scoresheet = new Scoresheet();
+			private var editor:Editor = new Editor();
+			
+			private function Run():void
+			{
+				//this.menu.Init();
+				//addChild(this.menu);
+			
+				this.game.init();
+				addChild(this.game);
+			
+				//this.scoresheet.Init();
+				//addChild(this.scoresheet);
+			
+				//this.editor.Init();
+				//addChild(this.editor);
+			}
+		]]>
+	</mx:Script>
+</mx:Application>
